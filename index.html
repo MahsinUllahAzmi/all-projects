@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="max-w-xl mx-auto mt-8">
+    <div class="relative overflow-hidden">
+      <div class="flex transition-transform duration-300 ease-in-out transform translate-x-0">
+        <img src="https://via.placeholder.com/600x300/1a1a1a/ffffff?text=Slide+1" alt="Slide 1" class="w-full">
+        <img src="https://via.placeholder.com/600x300/333333/ffffff?text=Slide+2" alt="Slide 2" class="w-full">
+        <img src="https://via.placeholder.com/600x300/666666/ffffff?text=Slide+3" alt="Slide 3" class="w-full">
+      </div>
+    </div>
+
+    <div class="flex justify-between mt-4">
+      <button onclick="prevSlide()" class="px-4 py-2 bg-blue-500 text-white rounded">Previous</button>
+      <button onclick="nextSlide()" class="px-4 py-2 bg-green-500 text-white rounded">Next</button>
+    </div>
+  </div>
+  
+
+  <script src="/main.js"></script>
+</body>
+
+</html>
