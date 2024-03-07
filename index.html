@@ -10,16 +10,22 @@
 </head>
 
 <body>
-  <div class="max-w-xl mx-auto mt-8">
+  <div class="max-w-xl mx-auto mt-8 relative">
     <div class="relative overflow-hidden">
       <div id="slider" class="flex transition-transform duration-300 ease-in-out transform translate-x-0">
         <img src="" class="images" alt="">
       </div>
     </div>
 
-    <div class="flex justify-between mt-4">
-      <button onclick="change(+1)" class="px-4 py-2 bg-green-500 text-white rounded">Next</button>
-      <button onclick="change(-1)" class="px-4 py-2 bg-blue-500 text-white rounded">Previous</button>
+    <div class="flex justify-between mt-4 absolute top-[35%] flex justify-between w-full">
+      <button onclick="change(+1)" class="px-1.5 py-1 bg-white text-black">Next</button>
+      <button onclick="change(-1)" class="px-1.5 py-1 bg-white text-black">Previous</button>
+    </div>
+
+    <div class="flex justify-center py-4 gap-2">
+      <button onclick="buttonChange(1)" class="btn rounded-full w-4 aspect-square bg-black"></button>
+      <button onclick="buttonChange(2)" class="btn rounded-full w-4 aspect-square bg-black"></button>
+      <button onclick="buttonChange(3)" class="btn rounded-full w-4 aspect-square bg-black"></button>
     </div>
   </div>
   
