@@ -12,12 +12,14 @@
 <body>
   <div class="max-w-xl mx-auto mt-8">
     <div class="relative overflow-hidden">
-      <div id="slider" class="flex transition-transform duration-300 ease-in-out transform translate-x-0"></div>
+      <div id="slider" class="flex transition-transform duration-300 ease-in-out transform translate-x-0">
+        <img src="" class="images" alt="">
+      </div>
     </div>
 
     <div class="flex justify-between mt-4">
-      <button onclick="prevSlide()" class="px-4 py-2 bg-blue-500 text-white rounded">Previous</button>
-      <button onclick="nextSlide()" class="px-4 py-2 bg-green-500 text-white rounded">Next</button>
+      <button onclick="change(+1)" class="px-4 py-2 bg-green-500 text-white rounded">Next</button>
+      <button onclick="change(-1)" class="px-4 py-2 bg-blue-500 text-white rounded">Previous</button>
     </div>
   </div>
   

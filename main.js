@@ -6,36 +6,18 @@ const imageUrls = [
 
 let currentIndex = 0;
 
-function createSlide(imageUrl) {
-  const slide = document.createElement('img');
-  slide.src = imageUrl;
-  slide.alt = 'Slide';
-  slide.classList.add('w-full');
-  return slide;
+function change(index){
+  currentIndex += index;
+  if(currentIndex < 0){
+    currentIndex = imageUrls.length - 1;
+  }else if(currentIndex >= imageUrls.length){
+    currentIndex = 0;
+  }
+  showImage()
 }
 
-// function showSlide(index) {
-//   const slider = document.getElementById('slider');
-//   slider.innerHTML = '';
-  
-//   const totalSlides = imageUrls.length;
-//   const newPosition = -index * 100 + '%';
-//   slider.style.transform = 'translateX(' + newPosition + ')';
-
-//   const currentImageUrl = imageUrls[index];
-  const currentSlide = createSlide(currentImageUrl);
-//   slider.appendChild(currentSlide);
-// }
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % imageUrls.length;
-  showSlide(currentIndex);
+function showImage(){
+  const images = document.querySelector('.images');
+  images.src = imageUrls[currentIndex];
 }
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
-  showSlide(currentIndex);
-}
-
-// Initial slide show
-showSlide(currentIndex);
+showImage()
