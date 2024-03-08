@@ -7,12 +7,15 @@ function showAccordion(){
     accordion.forEach((accordion , index) => {
         accordion.addEventListener('click', () =>{
             description.forEach((description) => {
-                description.classList.add('h-0', 'overflow-hidden');
-                console.log(icon)
+                description.classList.add('hidden');
             })
-            description[index].classList.remove('h-0', 'overflow-hidden')
+            icon.forEach((icon) => {
+                icon.classList.add('rotate-180');
+            })
+            description[index].classList.remove('hidden')
+            icon[index].classList.remove('rotate-180')
         })
-        description[index].classList.add('h-0' , 'overflow-hidden')
+        description[index].classList.toggle('hidden')
     });
 }
 showAccordion()
