@@ -1,21 +1,19 @@
-const accordion = document.querySelectorAll('.accordion');
-const description = document.querySelectorAll('.description');
-const icon = document.querySelectorAll('.plus');
+const btn = document.querySelector('.btn');
+const modal = document.querySelector('.modal');
+const modalContainer = document.querySelector('.modal_container');
+const close = document.querySelector('.close');
 
+btn.addEventListener('click', () =>{
+    modalContainer.classList.remove('hidden')
+    modal.classList.add('translate-y-[0px]' , 'duration-300')
+    close.addEventListener('click', () =>{
+        modalContainer.classList.add('hidden')
+    })
+})
 
-function showAccordion(){
-    accordion.forEach((accordion , index) => {
-        accordion.addEventListener('click', () =>{
-            description.forEach((description) => {
-                description.classList.add('hidden');
-            })
-            icon.forEach((icon) => {
-                icon.classList.add('rotate-180');
-            })
-            description[index].classList.remove('hidden')
-            icon[index].classList.remove('rotate-180')
-        })
-        description[index].classList.toggle('hidden')
-    });
-}
-showAccordion()
+window.addEventListener('click', (event) =>{
+    console.log(event.target)
+    if(event.target == modalContainer){
+        modalContainer.classList.add('hidden');
+    }
+})
