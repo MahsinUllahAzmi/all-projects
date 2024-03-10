@@ -1,19 +1,20 @@
-const btn = document.querySelector('.btn');
+const modalImage = document.querySelector('.modalImage');
 const modal = document.querySelector('.modal');
-const modalContainer = document.querySelector('.modal_container');
 const close = document.querySelector('.close');
+const popupImage = document.querySelector('.popupImage');
+const popupTitle = document.querySelector('.popupTitle');
+const content = document.querySelector('.content');
 
-btn.addEventListener('click', () =>{
-    modalContainer.classList.remove('hidden')
-    modal.classList.add('translate-y-[0px]' , 'duration-300')
+
+modalImage.addEventListener('click', function(){
+    modal.classList.remove('hidden');
+    popupImage.src = this.src;
+    popupTitle.innerHTML = this.alt;
+    popupImage.classList.add('w-[600px]' , 'h-[400px]')
+    content.classList.add('scale-[1]')
     close.addEventListener('click', () =>{
-        modalContainer.classList.add('hidden')
-    })
-})
+        modal.classList.add('hidden');
+    });
+});
 
-window.addEventListener('click', (event) =>{
-    console.log(event.target)
-    if(event.target == modalContainer){
-        modalContainer.classList.add('hidden');
-    }
-})
+// popupTitle.innerHTML = this.alt;
