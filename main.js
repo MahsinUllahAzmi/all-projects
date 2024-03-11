@@ -34,7 +34,6 @@ function changeBtn(index){
     popupTitle.innerHTML = imageUrl[currentIndex].alt;
 }
 
-
 function change(index){
     modal.classList.remove('hidden');
     popupImage.src = imageUrl[index - 1].img;
