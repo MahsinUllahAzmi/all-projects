@@ -11,15 +11,24 @@
 
 <body>
   <div class="flex gap-4 justify-center">
-    <img class="modalImage w-[350px] h-[250px] rounded cursor-pointer border-8 border-black" src="https://images.unsplash.com/photo-1442544213729-6a15f1611937?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Village 1">
-    <img class="modalImage w-[350px] h-[250px] rounded cursor-pointer border-8 border-black" src="https://images.unsplash.com/photo-1591866497533-403d44694fa1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D" alt="Village 2">
-    <img class="modalImage w-[350px] h-[250px] rounded cursor-pointer border-8 border-black" src="https://images.unsplash.com/photo-1572908721147-0a9eb395762d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D" alt="Village 3">
+    <img onclick="change(1)" class="modalImage w-[350px] h-[250px] rounded cursor-pointer border-8 border-black" src="https://images.unsplash.com/photo-1442544213729-6a15f1611937?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Village 1">
+    <img onclick="change(2)" class="modalImage w-[350px] h-[250px] rounded cursor-pointer border-8 border-black" src="https://images.unsplash.com/photo-1591866497533-403d44694fa1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D" alt="Village 2">
+    <img onclick="change(3)" class="modalImage w-[350px] h-[250px] rounded cursor-pointer border-8 border-black" src="https://images.unsplash.com/photo-1572908721147-0a9eb395762d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D" alt="Village 3">
   </div>
-  <div class="modal hidden fixed top-0 right-0 bottom-0 left-0 bg-black/80">
+  <div class="modal fixed hidden top-0 right-0 bottom-0 left-0 bg-black/80">
     <button class="close absolute top-4 right-4 bg-red-500 text-white bold px-4 py-2 rounded ">x</button>
-    <div class="absolute translate-x-[80%] translate-y-[30%] duration-300 content">
-      <img src="" class="popupImage rounded w-[600px] h-[400px]" alt="">
+    <div class="absolute translate-x-[50%] translate-y-[10%] duration-300 content max-w-[800px]">
+      <img src="" class="popupImage rounded w-[800px] h-[400px]" alt="">
       <span class="bg-black w-full block py-2 text-center text-white font-bold rounded-b popupTitle"></span>
+      <div class="flex justify-between">
+        <button class="text-white px-4 py-2 bg-red-500 rounded" onclick="changeBtn(-1)">pre</button>
+        <button class="text-white px-4 py-2 bg-green-500 rounded" onclick="changeBtn(1)">next</button>
+      </div>
+      <div class="flex justify-center">
+        <img onclick="change(1)" class="modalImage h-[150px] w-[33.33%] opacity-[0.3] hover:opacity-[1] object-cover rounded cursor-pointer duration-300" src="https://images.unsplash.com/photo-1442544213729-6a15f1611937?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Village 1">
+        <img onclick="change(2)" class="modalImage h-[150px] w-[33.33%] opacity-[0.3] hover:opacity-[1] object-cover rounded cursor-pointer duration-300" src="https://images.unsplash.com/photo-1591866497533-403d44694fa1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D" alt="Village 2">
+        <img onclick="change(3)" class="modalImage h-[150px] w-[33.33%] opacity-[0.3] hover:opacity-[1] object-cover rounded cursor-pointer duration-300" src="https://images.unsplash.com/photo-1572908721147-0a9eb395762d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D" alt="Village 3">
+      </div>
     </div>
   </div>
 
