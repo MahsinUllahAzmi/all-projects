@@ -6,17 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-  <div class="max-w-[600px] mx-auto">
-    <div>
-      <div>1/2</div>
-      <img src="https://plus.unsplash.com/premium_photo-1676496046182-356a6a0ed002?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="">
+  <div class="max-w-[800px] mx-auto relative">
+    <div class="flex w-full justify-between absolute top-[35%] text-white">
+      <button onclick="changeslide(1)" class="bg-green-500 z-[9999] px-4 py-2">next</button>
+      <button onclick="changeslide(-1)" class="bg-green-500 z-[9999] px-4 py-2">prev</button>
     </div>
 
-    <div>caption</div>
+    <div class="relative">
+      <div class="imgIndex absolute top-4 left-4 text-lg font-bold text-white"></div>
+      <img class="slideImg w-full h-[400px] object-cove" src="" alt="">
+    </div>
+
+    <div class="caption w-full bg-black text-center text-white text-lg font-bold py-2"></div>
+
+
+    <div class="grid grid-cols-4">
+      <img class="h-[140px] cursor-pointer dottes"  src="https://via.placeholder.com/600x300/F44336/ffffff?text=Slide+1" alt="">
+      <img class="h-[140px] cursor-pointer dottes"  src="https://via.placeholder.com/600x300/4ac/ffffff?text=Slide+2" alt="">
+      <img class="h-[140px] cursor-pointer dottes"  src="https://via.placeholder.com/600x300/9C27B0/ffffff?text=Slide+3" alt="">
+      <img class="h-[140px] cursor-pointer dottes"  src="https://via.placeholder.com/600x300/FFA500/ffffff?text=Slide+4" alt="">
+    </div>
   </div>
 
   <script src="/main.js"></script>
