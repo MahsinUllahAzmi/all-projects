@@ -26,4 +26,6 @@ tabBtn.forEach((item , index) => {
         })
         tabBtn[index].classList.add('bg-gray-200');
     })
+    title.innerHTML = tabData[0].title;
+    description.innerHTML = tabData[0].descrip;
 });
