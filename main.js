@@ -20,7 +20,6 @@ btn.forEach((item, index) => {
         }
         else{
             grid_content.classList.add('grid-cols-4');
-            // grid_content.classList.remove('grid-cols-3');
         }
     });
 });
