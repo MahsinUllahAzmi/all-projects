@@ -1,32 +1,24 @@
-//  Basic Array Operations (Methods)
+// CHALLENGE #2
+// Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 
-// Add Elements
-const friends = ['Dhaka', 'Mymensingh', 'Khulna'];
-const newLength = friends.push('Rangpur')
-console.log(friends)
-console.log(newLength)
+// Your tasks:
 
-friends.unshift('Jamalpur')
-console.log(friends)
+// Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+// And now let's use arrays! So, create an array called bills containing the test data below.
+
+// Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+// BONUS: Create an array totals containing the total values, so the bill + tip.
 
 
-// Remove Elements
- const popped = friends.pop() //last
-console.log(popped)
-console.log(friends)
-
-friends.shift() //first
-console.log(friends)
-
-console.log(friends.indexOf('Mymensingh')) //1
-console.log(friends.indexOf('dhaka')) //-1
-
-friends.push(25)
-console.log(friends.includes('Mymensingh')) //true
-console.log(friends.includes('dhaka')) //false
-console.log(friends.includes(25)) //true
-console.log(friends.includes('25')) //false
-
-if(friends.includes('Mymensingh')){
-    console.log('Our district in Mymensingh')
+const calcTip = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; 
 }
+
+// const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const bill = [125, 555, 44];
+const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+const totals = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
+console.log(bill, tips, totals);
