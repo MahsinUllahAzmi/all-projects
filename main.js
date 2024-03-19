@@ -1,36 +1,33 @@
 const mahsin = {
     firstName: 'Mahsin',
     lastName: 'Ullah',
-    BirthDate: 2024-2004,
+    BirthYears: 2004,
     jobs: 'WebDeveloper',
-    friends: ['Karim','Kamal','Poshi','Sabrin']
-}
+    friends: ['Karim','Kamal','Poshi','Sabrin'],
+    hasDiverLi: true,
+    // calcAge: function(BirthYears){
+    //     return 2024 - BirthYears;
+    // }
 
-console.log(mahsin)
-console.log(mahsin.firstName)
-console.log(mahsin['firstName'])
-
-const nameKey = 'name';
-console.log('first' + nameKey)
-console.log('last' + nameKey)
-
-
-const interestIN = prompt('what do you want to know about mahsin?')
-console.log(mahsin[interestIN])
-
-if(mahsin[interestIN]){
-    console.log(mahsin[interestIN]) 
-}else{
-    console.log('Wrong request')
-}
-
-mahsin.location = 'Bangladesh';
-mahsin['twitter'] = '@mahsin';
-
-console.log(mahsin)
+    // calcAge: function(){
+    //     return 2024 - this.BirthYears;
+    // }
 
 
-// challenge
-// mahsin has 3 friends, and has best friends is called sabrin
+    calcAge: function(){
+        this.ages = 2024 - this.BirthYears;
+        return this.ages;
+    },
+    getSummery: function(){
+        return `${this.firstName} is a ${this.calcAge()} years old ${this.jobs}, and he has ${this.hasDiverLi ? 'a' : 'no'} , driver is license..`
+    }
+};   
 
-console.log(`${mahsin.firstName} has ${mahsin.friends.length}, frindes and has best frinds is called ${mahsin.friends[0]}`)
+console.log(mahsin.calcAge())
+console.log(mahsin.getSummery())
+// console.log(mahsin.ages)
+// console.log(mahsin.ages)
+// console.log(mahsin.ages)
+// console.log(mahsin.ages)
+// console.log(mahsin.ages)
+// console.log(mahsagesge'](2008))
