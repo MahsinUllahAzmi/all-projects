@@ -7,17 +7,26 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <style>
+    .activeBar1{
+      transform: translate(0 , 5px) rotate(45deg);
+      transition: 0.3s;
+    }
+    .activeBar3{
+      transform: translate(0 , -11px) rotate(-45deg);
+      transition: 0.3s;
+    }
+  </style>
 </head>
 
 <body>
   <div class="max-w-[1200px] mx-auto mt-10">
-   <div class="w-full bg-gray-300 mb-6">
-    <div class="bar bg-green-500 w-[1%] h-[35px]"></div>
-   </div>
-   <div class="flex justify-between items-center">
-    <button class="bg-green-500 px-4 py-1.5 text-white rounded duration-300" onclick="runBar()">Run</button>
-    <div class="text-lg value font-bold">10%</div>
-   </div>
+    <button class="cursor-pointer w-8" onclick="changeBar(this)">
+      <div class="duration-300 bar-1 bg-black w-full mb-1 h-1 bg-orange-500"></div>
+      <div class="duration-300 bar-2 bg-black w-full mb-1 h-1 bg-orange-500"></div>
+      <div class="duration-300 bar-3 bg-black w-full mb-1 h-1 bg-orange-500"></div>
+    </button>
   </div>
 
 
