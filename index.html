@@ -9,24 +9,29 @@
   <!-- <link rel="stylesheet" href="style.css"> -->
 
   <style>
-    .activeBar1{
-      transform: translate(0 , 5px) rotate(45deg);
-      transition: 0.3s;
-    }
-    .activeBar3{
-      transform: translate(0 , -11px) rotate(-45deg);
-      transition: 0.3s;
-    }
+
   </style>
 </head>
 
 <body>
-  <div class="max-w-[1200px] mx-auto mt-10">
-    <button class="cursor-pointer w-8" onclick="changeBar(this)">
-      <div class="duration-300 bar-1 bg-black w-full mb-1 h-1 bg-orange-500"></div>
-      <div class="duration-300 bar-2 bg-black w-full mb-1 h-1 bg-orange-500"></div>
-      <div class="duration-300 bar-3 bg-black w-full mb-1 h-1 bg-orange-500"></div>
-    </button>
+  <nav class="border-b py-2">
+    <div class="max-w-[1200px] mx-auto flex justify-between item-center">
+      <div class="">
+        <a href="#" class="px-4 py-1 hover:text-red-500 text-[#444] font-semibold duration-300 inline-block">Home</a>
+        <a href="#" class="px-4 py-1 hover:text-red-500 text-[#444] font-semibold duration-300 inline-block">Band</a>
+        <a href="#" class="px-4 py-1 hover:text-red-500 text-[#444] font-semibold duration-300 inline-block">Tour</a>
+        <a href="#" class="px-4 py-1 hover:text-red-500 text-[#444] font-semibold duration-300 inline-block">Contact</a>
+      </div>
+      <div>
+        <button class="py-1 px-4 bg-red-500 text-white rounded">Registation</button>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <div>
+      <img src="" alt="" class="slideImages object-cover w-full h-[600px]">
+    </div>
   </div>
 
 
