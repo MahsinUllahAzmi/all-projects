@@ -1,15 +1,31 @@
-function searchManeger(){
-    const searchManeger = document.querySelector('.searchManeger')
-    const filter = searchManeger.value.toUpperCase();
-    const menuList = document.querySelectorAll('.menuList')
+const data = [
+    {
+        mahsin: 'iudsjnxc',
+        number: 20,
+    },
+    {
+        mahsin: 'iudsjnxc',
+        number: 20,
+    },
+    {
+        mahsin: 'iudsjnxc',
+        number: 20,
+    },
+    {
+        mahsin: 'iudsjnxc',
+        number: 20,
+    }
+]
 
-    menuList.forEach((item , index) => {
-        const x = item[index];
-        console.log(x)
-        if(item.innerHTML.toUpperCase().indexOf(filter) > -1){
-            item[index].style.display = '';
-        }else{
-            item[index].style.display = 'none';
-        }
+
+
+const searchManeger = document.querySelector('.searchManeger')
+const menuList = document.querySelectorAll('.menuList')
+
+searchManeger.addEventListener('keyup', (e) => {
+    const search = e.target.value.toUpperCase();
+    const data = data.filter(item => {
+        console.log(item)
     })
-}
+
+})
