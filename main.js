@@ -100,53 +100,48 @@ const AccorData = [
         Description: 'This code implements a simple accordion functionality that allows users to toggle the visibility of specific sections of content. It starts by selecting three groups of elements: action_wrapper.'
     },
     {
-        Title: 'Title 1',
+        Title: 'Title 2',
         Description: 'Within the handleAccordion function, the code targets the corresponding description element based on the index of the clicked action_wrapper. It checks whether the description element contains a class calle.'
     },
     {
-        Title: 'Title 1',
+        Title: 'Title 3',
         Description: 'it is added back, effectively hiding the content again. This toggle behavior creates an accordion effect, where clicking an item alternates between showing and hiding the relevant section.'
     },
     {
-        Title: 'Title 1',
+        Title: 'Title 4',
         Description: 'Overall, the code provides a functional and interactive way to manage collapsible content sections. It can be further improved by using modern JavaScript methods like.'
     },
 ]
 
-
-
 let action_wrapper = document.getElementsByClassName('action_wrapper');
 let actionBtn = document.getElementsByClassName('actionBtn');
 let description = document.getElementsByClassName('description');
-let mahsin = document.getElementById('mahsin');
+let containerDiv = document.getElementById('containerDiv');
 
-function handelHtml(){
-    AccorData.forEach(item => {
-        mahsin.innerHTML += 
-        `   <div class="border">  
-                <div class= "action_wrapper bg-gray flex justify-between bg-gray-200 p-4">
-                    <h2 class="font-bold text-xl">${item.Title}</h2>
-                    <button class="font-bold text-xl actionBtn">+</button>
-                </div>
-                <div class="p-4 text-md description hidden">
-                    <p>${item.Description}</p>
-                </div> 
-            </div>
-        `; 
-    });
-}
 
-if(action_wrapper && actionBtn && description && AccorData && mahsin){
+if(action_wrapper && actionBtn && description && AccorData){
     handelHtml()
+    
     for(let i = 0; i < action_wrapper.length; i++){
        action_wrapper[i].addEventListener('click', () => {
             handleAccordion(i)
         })
     }
 }
-
-
-
+function handelHtml(){
+    AccorData.forEach(item => {
+        containerDiv.innerHTML += 
+        `<div class="border">  
+            <div class= "action_wrapper bg-gray flex justify-between bg-gray-200 p-4">
+                <h2 class="font-bold text-xl">${item.Title}</h2>
+                <button class="font-bold text-xl actionBtn">+</button>
+            </div>
+            <div class="p-4 text-md description hidden">
+                <p>${item.Description}</p>
+            </div> 
+        </div>`;     
+    });
+}
 function handleAccordion(index){
     if (description[index].classList.contains('hidden')) {
         description[index].classList.remove('hidden');
