@@ -1,78 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-</head>
-<body>
-    <!-- <div id="containerDiv" class="container shadow mx-auto p-4 border w-[1000px]">
-        <h2 class="text-[25px] mb-2 font-semibold">Slideshow</h2>
-        <div class="relative mb-4">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="h-screen grid place-content-center">
+        <div class="py-[70px] relative px-4 w-[550px] bg-[#6a5acd] text-white font-semibold rounded-md shadow-md">
+            <img 
+                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80" 
+                alt=""
+                class="border-2 border-black prof_img absolute w-[100px] rounded-full left-1/2 -top-0 transform -translate-x-1/2 -translate-y-1/2"    
+            >
+            <p class="bio_text mb-4">
+                Eligendi in praesentium repellat distinctio necessitatibus quibusdam quam, aliquid excepturi laborum.
+            </p>
 
-            <div class="font-medium absolute left-[10px] top-[10px] text-white text-lg">
-                <span>4</span> / <span>3</span>
-            </div>
-
-            <div class="h-[338px] overflow-hidden">
-                <img 
-                    class="image_slide"
-                    src="https://www.w3schools.com/howto/img_nature_wide.jpg"
-                    alt="Nature 1"
-                >
-                <img 
-                    class="image_slide "
-                    src="https://www.w3schools.com/howto/img_snow_wide.jpg"
-                    alt="Nature 2"
-                >
-                <img 
-                    class="image_slide "
-                    src="https://www.w3schools.com/howto/img_mountains_wide.jpg"
-                    alt="Nature 3"
-                >
-                <img 
-                    class="image_slide "
-                    src="https://www.w3schools.com/howto/img_mountains_wide.jpg"
-                    alt="Nature 4"
-                >
-            </div>
-
-            <div class="absolute bottom-[10px] text-lg text-white right-[45%]">
-                <span>Caption Text</span>
-            </div>
-
-            <div>
-                <button 
-                    onclick="arrow_left(1)"
-                    class="absolute top-2/4 left-0 bg-gray-400 text-xl font-bold text-white py-1 hover:bg-black hover:text-white duration-300 px-4"
-                >
-                    <i class="ph ph-caret-left"></i>
-                </button>
-                <button 
-                    onclick="arrow_right(1)"
-                    class="absolute top-2/4 right-0 bg-gray-400 text-xl font-bold text-white py-1 hover:bg-black hover:text-white duration-300 px-4"
-                >
-                    <i class="ph ph-caret-right"></i>
-                </button>
-            </div>
+            <h3 class="name_text text-[12px]">Rahim UX</h3>
         </div>
+    </div>
 
-
-        <div class="flex justify-center gap-2">
-            <div class="w-[12px] aspect-square rounded-full bg-[#bbbbbb]"></div>
-            <div class="w-[12px] aspect-square rounded-full bg-[#bbbbbb]"></div>
-            <div class="w-[12px] aspect-square rounded-full bg-[#bbbbbb]"></div>
-            <div class="w-[12px] aspect-square rounded-full bg-[#bbbbbb]"></div>
-        </div>
-    </div> -->
-
-
-    <h2 class="text-center text-2xl font-bold">
-        My Name is <span id="title" class=" text-red-500"></span>
-    </h2>
-    
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
