@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <div class="h-screen grid place-content-center">
-        <div class="py-[70px] relative px-4 w-[550px] bg-[#6a5acd] text-white font-semibold rounded-md shadow-md">
-            <img 
-                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80" 
-                alt=""
-                class="border-2 border-black prof_img absolute w-[100px] rounded-full left-1/2 -top-0 transform -translate-x-1/2 -translate-y-1/2"    
-            >
-            <p class="bio_text mb-4">
-                Eligendi in praesentium repellat distinctio necessitatibus quibusdam quam, aliquid excepturi laborum.
-            </p>
+  <body> 
+    <div class="container h-screen grid place-content-center">
+        <div class="p-4 w-[600px] border-2 border-gray-100 rounded-4 shadow-md">
+          <h2 class="text-2xl font-bold text-center mb-4">Tip Calculator</h2>
+          <p class="font-semibold mb-4">Enter the bill amount and tip percentage to calculate the total.</p>
+            <div class="grid">
+              <label class="py-2">Bill amount:</label>
+              <input 
+                type="number" 
+                placeholder="Enter Your Bill" 
+                class="input_1 border-2 py-2 px-4 rounded-md border-gray-200">
+            </div>
+            <div class="grid">
+              <label class="py-2">Tip percentage:</label>
+              <input 
+                type="number" 
+                placeholder="Enter Your percentage" 
+                class="input_2 border-2 py-2 px-4 rounded-md border-gray-200">
+            </div>
+            <button class="action_btn my-4 font-semibold bg-green-500 text-white w-full py-2 rounded-md cursor-pointer">CALCULATE</button>
 
-            <h3 class="name_text text-[12px]">Rahim UX</h3>
+            <h3 class="font-bold text-lg">Total: <span class="font-bold text-lg value_show">0</span>.00</h3>
         </div>
     </div>
+
 
     <script src="main.js"></script>
   </body>
