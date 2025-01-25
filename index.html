@@ -5,32 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body> 
+  <body>
     <div class="container h-screen grid place-content-center">
-        <div class="p-4 w-[600px] border-2 border-gray-100 rounded-4 shadow-md">
-          <h2 class="text-2xl font-bold text-center mb-4">Tip Calculator</h2>
-          <p class="font-semibold mb-4">Enter the bill amount and tip percentage to calculate the total.</p>
-            <div class="grid">
-              <label class="py-2">Bill amount:</label>
-              <input 
-                type="number" 
-                placeholder="Enter Your Bill" 
-                class="input_1 border-2 py-2 px-4 rounded-md border-gray-200">
-            </div>
-            <div class="grid">
-              <label class="py-2">Tip percentage:</label>
-              <input 
-                type="number" 
-                placeholder="Enter Your percentage" 
-                class="input_2 border-2 py-2 px-4 rounded-md border-gray-200">
-            </div>
-            <button class="action_btn my-4 font-semibold bg-green-500 text-white w-full py-2 rounded-md cursor-pointer">CALCULATE</button>
-
-            <h3 class="font-bold text-lg">Total: <span class="font-bold text-lg value_show">0</span>.00</h3>
+      <div class="w-[550px] shadow-md border-gray-200 p-4 rounded-md border-2 ">
+        <h3 class="font-bold text-2xl mb-4">Tip Calculator</h3>
+        <p class="text-md font-semibold">Enter the bill amount and tip percentage to calculate the total.</p>
+        <div class="grid">
+          <div class="grid">
+            <label class="py-2">Bill amount:</label>
+            <span class="amount_error bg-[#e40613] text-sm font-semibold rounded-sm amount_error text-white px-4 py-2 hidden"></span>
+          </div>
+          <input type="number" class="input_1 border border-gray-300 px-4 py-2 rounded-md">
         </div>
+        <div class="grid">
+          <div class="grid">
+            <label class="py-2">Tip percentage:</label>
+            <span class="percent_error bg-[#e40613] text-sm font-semibold rounded-sm amount_error text-white px-4 py-2 hidden"></span>
+          </div>
+          <input type="number" class="input_2 border border-gray-300 px-4 py-2 rounded-md">
+        </div>
+        <button class="action_btn cursor-pointer text-white font-semibold w-full bg-green-500 py-2 px-4 my-2 rounded">CALCULATE</button>
+
+        <h3 class="font-semibold text-md">Total:  <span class="show_value">0.00</span></h3>
+      </div>
     </div>
-
-
     <script src="main.js"></script>
   </body>
 </html>
