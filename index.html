@@ -4,31 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   </head>
   <body>
     <div class="container h-screen grid place-content-center">
-      <div class="w-[550px] shadow-md border-gray-200 p-4 rounded-md border-2 ">
-        <h3 class="font-bold text-2xl mb-4">Tip Calculator</h3>
-        <p class="text-md font-semibold">Enter the bill amount and tip percentage to calculate the total.</p>
-        <div class="grid">
-          <div class="grid">
-            <label class="py-2">Bill amount:</label>
-            <span class="amount_error bg-[#e40613] text-sm font-semibold rounded-sm amount_error text-white px-4 py-2 hidden"></span>
-          </div>
-          <input type="number" class="input_1 border border-gray-300 px-4 py-2 rounded-md">
-        </div>
-        <div class="grid">
-          <div class="grid">
-            <label class="py-2">Tip percentage:</label>
-            <span class="percent_error bg-[#e40613] text-sm font-semibold rounded-sm amount_error text-white px-4 py-2 hidden"></span>
-          </div>
-          <input type="number" class="input_2 border border-gray-300 px-4 py-2 rounded-md">
-        </div>
-        <button class="action_btn cursor-pointer text-white font-semibold w-full bg-green-500 py-2 px-4 my-2 rounded">CALCULATE</button>
+      <div class="w-[400px] shadow-md border-gray-200 p-2 rounded-md border-2 ">
+        <h3 class="font-bold text-2xl mb-4">Discount Calculator</h3>
+          <div class="p-4 rounded-md bg-[#f5f4fb] mb-4">
+            <!-- javaScript step 1 work -->
+            <p class="mb-2 font-semibold text-[#2B3148] text-[17px] font-mono">What type of discount?</p>
+            <label class="type_discount_wrapper relative flex justify-between mb-2 bg-white rounded-md border border-[#E6DAFA] py-[2px] px-[4px]">
+              <input class="type_discount_input w-full py-2 px-2 placeholder:text-md text-md font-semibold text-[#2B3148] placeholder:font-semibold placeholder:text-[#6314e6]" type="text" placeholder="Type Of Discount">
+              <button class="type_button text-[20px] font-bold text-[#6314e6] bg-white hover:bg-[#f5f4fb] px-4 py-[6px] rounded-md">
+                <i class="ph ph-caret-down"></i>
+              </button>
+              <div class="dropdown_Wrapper hidden w-full absolute top-[100%] right-0 bg-white shadow-lg border border-gray-200 grid p-4 rounded-md rounded-md">
+                <span class="type_discount_value px-4 py-[5px] mb-[4px] text-[#2B3148] text-md font-semibold hover:text-[#6314e6] duration-300 rounded-md hover:bg-[#f5f4fb]">% off</span>
+                <span class="type_discount_value px-4 py-[5px] mb-[4px] text-[#2B3148] text-md font-semibold hover:text-[#6314e6] duration-300 rounded-md hover:bg-[#f5f4fb]">fixed amount off</span>
+              </div>
+            </label>
 
-        <h3 class="font-semibold text-md">Total:  <span class="show_value">0.00</span></h3>
+
+            <!-- javaScript step 2 work -->
+            <p class="mb-2 font-semibold text-[#2B3148] text-[17px] font-mono">Original price</p>
+            <label class="flex justify-between mb-2 bg-white rounded-md border border-[#E6DAFA] py-[4px] px-[4px]">
+              <span class="text-md font-semibold text-gray-300 bg-white px-2 py-2 rounded-md">
+                BDT
+              </span>
+              <input class="orginal_price_input w-full py-2 px-2" type="number">
+            </label>
+
+            <p class="mb-2 font-semibold text-[#2B3148] text-[17px] font-mono">Discount</p>
+            <label class="discount_BDT_percent flex justify-between mb-2 bg-white rounded-md border border-[#E6DAFA] py-[4px] px-[4px]">
+              <span class="hidden bdt text-md font-semibold text-gray-300 bg-white px-2 py-2 rounded-md">
+                BDT
+              </span>
+              <input class="w-full py-2 px-2 discount_input" type="text">
+              <span class="hidden percent text-md font-semibold text-[#6314e6] bg-white px-2 py-2 rounded-md">
+                %
+              </span>
+            </label>
+          </div>
+
+
+          <div class="p-4 bg-[#f5f4fb] rounded-md mb-4">
+            <h3 class="mb-2 font-semibold text-[#2B3148] text-[20px] font-mono">After discount</h3>
+
+            <p class="mb-2 font-semibold text-[#2B3148] text-[17px] font-mono">You pay...</p>
+            <label class="flex justify-between mb-2 bg-white rounded-md border border-[#E6DAFA] py-[4px] px-[4px]">
+              <span class="text-md font-semibold text-gray-300 bg-white px-2 py-2 rounded-md">
+                BDT
+              </span>
+              <input class="you_pay w-full py-2 px-2" type="text">
+            </label>
+
+            <p class="mb-2 font-semibold text-[#2B3148] text-[17px] font-mono">You're saving...</p>
+           <label class="flex justify-between mb-2 bg-white rounded-md border border-[#E6DAFA] py-[4px] px-[4px]">
+              <span class="text-md font-semibold text-gray-300 bg-white px-2 py-2 rounded-md">
+                BDT
+              </span>
+              <input class="saving w-full py-2 px-2" type="text">
+            </label>
+          </div>
       </div>
     </div>
+
+
     <script src="main.js"></script>
   </body>
 </html>
